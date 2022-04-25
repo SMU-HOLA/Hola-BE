@@ -16,7 +16,7 @@ public interface DistrictRepository extends JpaRepository<District,Long> {
     List<District> findByTotalScoreGreaterThan(Double score);
 
     // 토탈스코어 TOP 5 랭킹 구 조회
-    @Query(value = "select dtr from District dtr " +
-            "order by dtr.totalScore DESC LIMIT 5", nativeQuery = true)
-    List<District> findTotalScoreTopFive();
+    List<District> findTop5ByOrderByTotalScoreDesc();
+
+
 }

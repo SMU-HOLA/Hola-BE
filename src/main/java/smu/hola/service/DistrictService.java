@@ -18,7 +18,7 @@ public class DistrictService {
     }
 
     public List<District> getTotalScoreRanking(){
-        return districtRepository.findTotalScoreTopFive();
+        return districtRepository.findTop5ByOrderByTotalScoreDesc();
     }
 
     public District getDistrictInfo(Long districtId){
