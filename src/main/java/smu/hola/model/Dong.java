@@ -1,12 +1,17 @@
 package smu.hola.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "seoul_dong_info")
 @Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Dong {
 
     @Id
@@ -32,7 +37,11 @@ public class Dong {
     @Column(name = "dong_greenery")
     private Double greenery;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "gu_id",insertable = false, updatable = false)
+    @ManyToOne
+    @JoinColumn(name = "gu_id")
     private District district;
+
+    @OneToMany(mappedBy = "dong")
+    private List<Estate> estates;
+
 }

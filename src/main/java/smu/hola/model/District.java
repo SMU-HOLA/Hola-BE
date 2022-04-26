@@ -1,8 +1,8 @@
 package smu.hola.model;
 
-import lombok.Generated;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -11,7 +11,8 @@ import java.util.List;
 @Entity
 @Table(name = "seoul_district_info")
 @Getter
-@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class District {
 
     @Id
