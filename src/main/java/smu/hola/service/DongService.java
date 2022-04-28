@@ -4,11 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import smu.hola.dto.DongDTO;
-import smu.hola.dto.RankDTO;
 import smu.hola.repository.DongRepository;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Service
 public class DongService {
